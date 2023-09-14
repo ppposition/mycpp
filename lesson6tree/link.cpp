@@ -10,9 +10,15 @@ struct link
 };
 void delete_tail(link *front){
     link *temp=front;
-    while(temp->next!=nullptr)
+    if(temp->next==nullptr){
+        cout<<"the link is null"<<endl;
+        return;
+    }
+    while(temp->next->next!=nullptr)
         temp=temp->next;
-    temp=nullptr;
+    link *current=temp->next;
+    temp->next=current->next;
+    delete current;
 }
 void print(link *front){
     link *temp=front->next;
