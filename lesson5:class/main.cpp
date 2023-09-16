@@ -1,8 +1,10 @@
-#include "Reset.h"
-
+#include "MyReset.h"
+#include "MyReset.cpp"
 int main() {
-    Reset<int> resetObject("position",12);
-    resetObject.print();
-
+    MyReset<int> r1("position",12);
+    MyReset<int> r2;
+    r2.print();
+    if(r2 < r1)
+        r1.print();
     return 0;
 }
