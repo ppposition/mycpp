@@ -6,10 +6,17 @@ using namespace std;
 const int HASH_SEED = 5381;
 const int HASH_MULTIPLIER = 33;
 const int HASH_MASK = unsigned(-1)>>1;
-class hash{
+struct Cell
+{
+    string name;
+    Cell *next;
+    Cell(string n):name(n){}
+};
+
+class Hash{
 private:
     int capacity;
-    string **buckets;
+    Cell **buckets;
     int hashCode(const string &str){
         unsigned hash = HASH_SEED;
         for(int i=0;i<str.length();i++)
@@ -17,10 +24,11 @@ private:
         return int(hash & HASH_MASK);
     }
 public:
-    hash(int c);
-    ~hash();
+    Hash(int c);
+    ~Hash();
     void insert(string s);
-    void contain(string s);
+    bool contain(string s);
     void remove(string s);
+    void rehash(int c);
 };
 #endif _HASH_H
