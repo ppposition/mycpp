@@ -26,7 +26,7 @@ void CuckooHash::insert(int v){
 
 void CuckooHash::insert_helper(int v, int table_num, int time){
     if(time>=2){
-        cout<<"cannot insert, kick off"<<v<<endl;
+        cout<<"cannot insert, kick off "<<v<<endl;
         return;
     }
     if(table_num==0){

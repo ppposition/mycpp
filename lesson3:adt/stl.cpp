@@ -18,6 +18,10 @@ int main(){
         for(int i:v)
             s.push(i);
     }
+    for(decltype(a.size()) i=0;i<a.size();i++)
+        for(decltype(a[i].size()) j=0;j<a[i].size();j++)
+            cout<<a[i][j]<<",";
+    cout<<endl;
     while(!s.empty()){
         cout<<s.top();
         q.push(s.top());
