@@ -4,7 +4,8 @@
         "unordered_set": "cpp",
         "iostream": "cpp",
         "cstring": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "iosfwd": "cpp"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }
