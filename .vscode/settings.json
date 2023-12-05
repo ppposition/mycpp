@@ -5,7 +5,10 @@
         "iostream": "cpp",
         "cstring": "cpp",
         "ostream": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "atomic": "cpp",
+        "string": "cpp",
+        "*.tcc": "cpp"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }
