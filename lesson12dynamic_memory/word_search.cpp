@@ -7,7 +7,7 @@ using namespace std;
 ostream &print(ostream &os,const QueryResult &q){
     os<<q.word<<" occurs "<<q.lines->size()<<((q.lines->size()==1)?string(" time."):string(" times."))<<endl;
     for(auto num:*q.lines)
-        os<<"\t(line "<<num+1<<") ";
+        os<<"\t(line "<<num+1<<") "<<(*q.file)[num]<<endl;
     return os;
 }
 

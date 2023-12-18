@@ -19,7 +19,7 @@ TextQuery::TextQuery(ifstream &is):file(new vector<string>)
     }
 }
 
-QueryResult TextQuery::query(const string &word){
+QueryResult TextQuery::query(const string &word) const{
     static shared_ptr<set<line_no>> nodata(new set<line_no>);
     auto loc = wm.find(word);
     if(loc==wm.end())
